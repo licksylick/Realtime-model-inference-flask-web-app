@@ -1,6 +1,8 @@
 UPLOAD_FOLDER = 'static/uploads'
 REMOVE_TIME = 15 * 60
 
+CAMERA_SOURCE = 'rtsp...'
+
 GPU_NUM = '0'
 VIDEO_RESOLUTION = (640, 480)
 

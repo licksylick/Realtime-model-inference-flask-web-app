@@ -1,7 +1,7 @@
 from flask import Flask, flash, request, render_template, Response
 import sys
 from pathlib import Path
-from config import UPLOAD_FOLDER, REMOVE_TIME, GPU_NUM, VIDEO_RESOLUTION, PORT
+from config import UPLOAD_FOLDER, REMOVE_TIME, CAMERA_SOURCE, GPU_NUM, VIDEO_RESOLUTION, PORT
 from utils import remove_old_files, model_predictions, draw_predictions
 import cv2
 import os
@@ -42,7 +42,7 @@ def upload_form():
 
 
 def webcam_capture(frame_queue, detection_queue):
-    camera = cv2.VideoCapture(1)
+    camera = cv2.VideoCapture(CAMERA_SOURCE)
     camera.set(cv2.CAP_PROP_FRAME_WIDTH, VIDEO_RESOLUTION[0])
     camera.set(cv2.CAP_PROP_FRAME_HEIGHT, VIDEO_RESOLUTION[1])
     global stop_event
