@@ -1,0 +1,8 @@
+UPLOAD_FOLDER = 'static/uploads'
+REMOVE_TIME = 15 * 60
+
+GPU_NUM = '0'
+VIDEO_RESOLUTION = (640, 480)
+
+PORT = 6987
+
